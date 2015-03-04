@@ -1,0 +1,14 @@
+<template name='searchWeightPCode'>
+  <div class="main-content">
+<!--     <form id=""> -->
+    <div class="ui action input">
+      <input placeholder="Search..." type="text" id="searchTerm">
+      <button class="ui icon button" id="searchButton">
+        <i class="search icon"></i>
+      </button>
+    </div>
+    <div id='searchResult'>
+      {{> avgWeightByPostCode}}
+    </div>
+  </div>
+</template>

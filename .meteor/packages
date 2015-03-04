@@ -21,7 +21,6 @@ natestrauser:animate-css
 dburles:collection-helpers
 meteorhacks:fast-render
 
-nooitaf:semantic-ui
 peerlibrary:dimsum
 meteorhacks:aggregate
 mfpierre:chartist-js
@@ -31,3 +30,4 @@ aldeed:geocoder
 rajit:bootstrap3-datepicker
 gildaspk:moment-datepicker
 cwohlman:pickadate
+semantic:ui-css
