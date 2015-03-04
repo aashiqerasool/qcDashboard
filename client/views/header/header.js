@@ -14,7 +14,8 @@ Template['header'].helpers({
     return Session.get('isActive') ? 'fadeIn' : 'fadeOut';
   },
   iconClass: function () {
-    return Meteor.user() ? 'user' : 'sign in';
+    //return Meteor.user() ? 'user' : 'sign in';
+    return Meteor.user() ? 'content' : 'sign in';
   }
 });
 

@@ -1,9 +1,9 @@
 <template name="header">
-    <div class="center aligned {{isActive}} header-wrapper">
+  <div class="center aligned {{isActive}} header-wrapper">
         <h1 class="huge center aligned main ui header">
             {{constant 'name'}}
             <div class="sub header">
-                
+    
             </div>
         </h1>
         <button class="basic ui resize icon button"><i class="{{iconClass}} icon"></i></button>
@@ -15,14 +15,16 @@
               </div>
             {{#if currentUser}}
             <div class="actions-wrapper">
-                {{#if currentUser.username}}
-                <div class="hello">Hi {{currentUser.username}}!</div>
-                {{/if}}
-
-                <div class="ui fluid purple log-out button">
+              
+<!--                 {{#if currentUser.emails}}
+                <div class="hello">Hi {{currentUser.emails}}!</div>
+                {{/if}} -->
+              <div class="center aligned ui purple log-out button">
                     <i class="sign out icon"></i>
                     Log out
                 </div>
+              <br>
+             {{> appMenu}}
             </div>
             {{else}}
             {{> atForm }}
@@ -30,5 +32,22 @@
         </div>
         {{/if}}
     </div>
+</template>
+
+<template name="appMenu">
+   <div class="ui labeled icon menu">
+     <a class="red item">
+       <i class="mail icon"></i>
+       Mail
+     </a>
+     <a class="teal item">
+       <i class="lab icon"></i>
+       Lab
+     </a>
+     <a class="green item">
+       <i class="star icon"></i>
+       Favorites
+     </a>
+  </div>
 </template>
 
