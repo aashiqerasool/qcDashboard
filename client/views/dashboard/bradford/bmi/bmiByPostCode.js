@@ -22,6 +22,12 @@ Template.bmiByPostCode.helpers({
     }
   },
   postCode: function(){
-    return Session.get('bmiSearchPCVal');
+    var sessSearchVal = Session.get('avgWeightSearchPCVal');
+    if(sessSearchVal=="bd") {
+      return "Bradford";
+    }
+    else {
+      return sessSearchVal;
+    }
   }
 });
