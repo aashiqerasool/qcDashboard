@@ -9,7 +9,7 @@ Template.searchByPCodeInput.events({
     Session.set('searchPCVal', searchTerm);
 //     var searchTerm = event;
 //     console.log('Search button clicked: '+ searchTerm);
-//     console.log('Session Value is '+ Session.get('searchPCVal'));
+    console.log('Session Value is '+ Session.get('searchPCVal'));
   },
     'keyup #searchTerm': function (event) {
     event.preventDefault();
@@ -18,6 +18,6 @@ Template.searchByPCodeInput.events({
     Session.set('avgWeightSearchPCVal', searchTerm);
 //     var searchTerm = event;
 //     console.log('Search button clicked: '+ searchTerm);
-//     console.log('Session Value is '+ Session.get('bmiSearchPCVal'));
+    console.log('Session Value is '+ Session.get('bmiSearchPCVal'));
   }, 
 });

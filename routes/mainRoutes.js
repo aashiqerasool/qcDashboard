@@ -19,10 +19,10 @@ Router.route('/weights', function () {
   SEO.set({ title: 'Weights - ' + Meteor.App.NAME });
 });
 
-// Router.route('/playground', function () {
-//   this.render('playground');
-//   SEO.set({ title: 'Playground - ' + Meteor.App.NAME });
-// });
+Router.route('/playground', function () {
+  this.render('playground');
+  SEO.set({ title: 'Playground - ' + Meteor.App.NAME });
+});
 
 Router.route('/bradfordStats', function () {
   this.render('bradfordStats');
@@ -31,6 +31,16 @@ Router.route('/bradfordStats', function () {
 
 Router.route('/bmi/searchByPCode', function () {
   this.render('searchBmiPCode');
+  SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
+});
+
+Router.route('/bmi/oaBmiGraph', function () {
+  this.render('oaBmiGraph');
+  SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
+});
+
+Router.route('/bmi/reactiveAvgBmiGaugePC', function () {
+  this.render('reactiveAvgBmiGaugePC');
   SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
 });
 

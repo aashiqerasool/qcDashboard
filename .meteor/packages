@@ -23,7 +23,6 @@ meteorhacks:fast-render
 
 peerlibrary:dimsum
 meteorhacks:aggregate
-mfpierre:chartist-js
 dburles:google-maps
 browser-policy
 aldeed:geocoder
@@ -31,3 +30,8 @@ rajit:bootstrap3-datepicker
 gildaspk:moment-datepicker
 cwohlman:pickadate
 semantic:ui-css
+bshamblen:morrisjs
+momentjs:moment
+gliese:chartist-js
+maazalik:highcharts
+percolate:synced-cron

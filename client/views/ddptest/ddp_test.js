@@ -1,9 +1,12 @@
 // var remote = DDP.connect('http://178.62.44.227/');
 
-var remote = DDP.connect('http://strong-racer-47-166762.euw1-2.nitrousbox.com/');
-Weights = new Meteor.Collection('Weights', remote); 
+// var remote = DDP.connect('http://strong-racer-47-166762.euw1-2.nitrousbox.com/');
+// Weights = new Meteor.Collection('Weights', remote); 
 
-remote.subscribe('Weights');
+// remote.subscribe('weightsRemote', function() {
+//   var items = Weights.find().fetch();
+//   console.log(items);
+// });
 // remote.call('bmiAggrfx');
 // remote.call("userBmi");
 
@@ -26,20 +29,23 @@ remote.subscribe('Weights');
 
 Template.ddpTest.helpers({
   item: function () {
-    return Weights.find();
-},
-  bmi: function () {
-    var bmiobj;
-    var bmi;
-    return remote.call("userBmi");
-//     remote.call("userBmi", function(error, data) {
-//       bmiobj = data[3];
-//       return bmi;
-//     return data[3].profile.bmi;
-//   });
-//     console.log(bmiobj);
-//     return bmiobj;
-}  
+    remote.subscribe('weightsRemote');
+    
+    console.log(Weights.find().fetch());
+    return Weights.find().fetch();
+  },
+//   bmi: function () {
+//     var bmiobj;
+//     var bmi;
+//     return remote.call("userBmi");
+// //     remote.call("userBmi", function(error, data) {
+// //       bmiobj = data[3];
+// //       return bmi;
+// //     return data[3].profile.bmi;
+// //   });
+// //     console.log(bmiobj);
+// //     return bmiobj;
+// }  
 });
 
 // Remote.call("bmiStatistics", function(error,result){

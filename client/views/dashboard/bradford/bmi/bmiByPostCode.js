@@ -1,4 +1,7 @@
 
+// Template.bmiByPostCode.rendered = function(){
+// Session.setDefault("latestUserBmisByPCode", null);
+// };
 
 Template.bmiByPostCode.helpers({
   bmiByPCodeMethod: function(){
@@ -23,7 +26,7 @@ Template.bmiByPostCode.helpers({
   },
   postCode: function(){
     var sessSearchVal = Session.get('avgWeightSearchPCVal');
-    if(sessSearchVal=="bd") {
+    if(sessSearchVal=="b" || sessSearchVal=="bd") {
       return "Bradford";
     }
     else {
