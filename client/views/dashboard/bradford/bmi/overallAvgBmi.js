@@ -1,9 +1,9 @@
-var remote = DDP.connect('http://strong-racer-47-166762.euw1-2.nitrousbox.com/');
+// var remote = DDP.connect('http://strong-racer-47-166762.euw1-2.nitrousbox.com/');
 
 Template.overallAvgBmi.helpers({
   overallBmiStats: function() {
     var overallStats;
-    remote.call('latestUserBmis', function(error, result) {
+    Remote.call('latestUserBmis', function(error, result) {
       overallStats = result;
       Session.set("overallBmi", result);
       return;
@@ -20,7 +20,7 @@ Template.overallAvgBmi.helpers({
   },
   overallAvgBmi: function() {
     var overallStats;
-    remote.call('overallAvgBmi', function(error, result) {
+    Remote.call('overallAvgBmi', function(error, result) {
       overallAvgBmis = result;
       Session.set("overallAvgBmis", result);
       return;

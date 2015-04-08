@@ -95,7 +95,7 @@ function buildAvgWeightGaugeReactive() {
 /*
  * Call the function to built the chart when the template is rendered
  */
-Template.reactiveAvgWeightBmiGaugePC.rendered = function () {
+Template.reactiveAvgWeightGaugePC.rendered = function () {
     this.autorun(function (c) {
       console.log(Session.get("latestUserWeightsByPCode"));  
       buildAvgWeightGaugeReactive();
@@ -105,7 +105,7 @@ Template.reactiveAvgWeightBmiGaugePC.rendered = function () {
 /*
  * Template events
  */
-Template.reactiveAvgWeightBmiGaugePC.events = {
+Template.reactiveAvgWeightGaugePC.events = {
     
     'change #reactive': function (event, template) {
         var newValue = $(event.target).val();

@@ -1,24 +1,14 @@
 <template name="bmiByPostCode">
-<!--   {{> contentHeader title="BMI Stats"}}
-  
-  {{#each overallBmiStats}}
-    {{lastUpdate}}
-    {{bmi}}
-    <br>
-  {{/each}} -->
-<!--   <div align="center"> -->
+  <br>
   {{#if bmiByPCodeMethod}}
     <div class="ui huge statistic">
     <div class="value">
-      
+      <p></p>
       {{bmiByPCodeMethod}}
-      
     </div>
-    <div class="huge label">
+    <div class="large label">
       Average BMI in {{postCode}}
     </div>
   </div>
   {{/if}}
-<!--   </div> -->
-<!--   <div class="ct-chart"></div> -->
 </template>

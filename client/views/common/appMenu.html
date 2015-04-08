@@ -1,0 +1,51 @@
+<template name="appMenu">
+<!--    <div class="ui labeled icon menu">
+     <a class="red item">
+       <i class="search icon"></i>
+       
+     </a>
+     <a class="teal item">
+       <i class="lab icon"></i>
+       Lab
+     </a>
+     <a class="green item">
+       <i class="star icon"></i>
+       Favorites
+     </a>
+  </div> -->
+  <div class="ui menu">
+  <a class="active item" href="{{pathFor route='home'}}">
+    <i class="home icon"></i> Home
+  </a>
+<div class="ui simple dropdown item">
+  <i class="search icon"></i>
+    Search by Postcode
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <a class="item" href="/search/byPCode/all"><i class="asterisk icon"></i> All Metrics</a>
+      <a class="item"><i class="crosshairs icon"></i> BMI</a>
+      <a class="item"><i class="crosshairs icon"></i> Weight</a>
+      <a class="item"><i class="crosshairs icon"></i> Activity</a>      
+    </div>
+  </div>
+  <div class="ui simple dropdown item">
+  <i class="line chart icon"></i>
+    Overall
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <a class="item"><i class="asterisk icon"></i> All Metrics</a>
+      <a class="item"><i class="crosshairs icon"></i> BMI</a>
+      <a class="item"><i class="crosshairs icon"></i> Weight</a>
+      <a class="item"><i class="crosshairs icon"></i> Activity</a>      
+    </div>
+  </div>  
+<!--   <div class="right menu">
+    <div class="item">
+      <div class="ui transparent icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div> -->
+</div>
+</template>

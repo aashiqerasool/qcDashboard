@@ -3,6 +3,13 @@ Router.route('/', {name:'home'}, function () {
   this.render('home');
   SEO.set({ title: 'Home - ' + Meteor.App.NAME });
 });
+
+// SignIn route
+Router.route('/signIn', {name:'signIn'}, function () {
+  this.render('signIn');
+  SEO.set({ title: 'Sign In - ' + Meteor.App.NAME });
+});
+
 // Profile Route
 Router.route('/profile', function () {
   this.render('profile');
@@ -49,7 +56,7 @@ Router.route('/weight/searchByPCode', function () {
   SEO.set({ title: 'Bradford Weight Statistics - ' + Meteor.App.NAME });
 });
 
-Router.route('/search/searchByPCode', function () {
+Router.route('/search/byPCode/all', function () {
   this.render('searchByPCode');
   SEO.set({ title: 'Bradford Health Statistics - ' + Meteor.App.NAME });
 });

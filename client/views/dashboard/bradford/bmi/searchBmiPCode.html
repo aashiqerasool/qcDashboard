@@ -1,14 +1,34 @@
 <template name='searchBmiPCode'>
   <div class="main-content">
+    <br>
 <!--     <form id=""> -->
-    <div class="ui action input">
+<!--     <div class="ui action input">
       <input placeholder="Search..." type="text" id="searchTerm">
       <button class="ui icon button" id="searchButton">
         <i class="search icon"></i>
       </button>
+    </div> -->
+    <div class="ui centered grid">
+    <div class="centered row">
+      <div class="three wide column">
+<!--         <br> -->
+      {{> searchByPCodeInput}}
+      </div>
     </div>
+    <div class="centered row">
+      <div class="three wide column">
+      {{> bmiByPostCode}} 
+      </div>
+      <div class="three wide column">
+      {{> reactiveAvgBmiGaugePC}} 
+      </div>
+    </div>
+    
+<!--     {{> searchByPCodeInput}}
+    
     <div id='searchResult'>
       {{> bmiByPostCode}}
-    </div>
+    </div> -->
+  </div>
   </div>
 </template>

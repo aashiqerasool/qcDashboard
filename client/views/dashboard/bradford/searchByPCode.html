@@ -1,5 +1,10 @@
 <template name="searchByPCode">
-  {{> searchByPCodeInput}}
+  
+  
+<!--   <div align='center'>
+    <br>
+  
+  </div> -->
 <!--   <div align="center">
     {{> bmiByPostCode}}
       &nbsp;
@@ -20,21 +25,28 @@
       </div>
     </div>
   </div> -->
+  <br>
   <div class="ui centered grid">
     <div class="centered row">
       <div class="three wide column">
-      {{> bmiByPostCode}} 
-      </div>
-      <div class="three column wide">
-      {{> avgWeightByPostCode}}
+<!--         <br> -->
+      {{> searchByPCodeInput}}
       </div>
     </div>
     <div class="centered row">
       <div class="three wide column">
+      {{> bmiByPostCode}} 
+      </div>
+      <div class="three wide column">
+      {{> avgWeightByPostCode}}
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="four wide column">
       {{> reactiveAvgBmiGaugePC}} 
       </div>
-      <div class="three column wide">
-      {{> reactiveAvgWeightBmiGaugePC}}
+      <div class="four column wide">
+      {{> reactiveAvgWeightGaugePC}}
       </div>
     </div>
   </div>

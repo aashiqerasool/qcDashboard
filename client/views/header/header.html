@@ -1,88 +1,37 @@
 <template name="header">
   <div class="center aligned {{isActive}} header-wrapper">
-        <h1 class="huge center aligned main ui header">
-            {{constant 'name'}}
+        <h1 class="huge center aligned main ui header" >
+          <a href="/">{{constant 'name'}}</a>
             <div class="sub header">
     
             </div>
         </h1>
         <button class="basic ui resize icon button"><i class="{{iconClass}} icon"></i></button>
 
-        {{#if showLogin}}
-        <div class="login-wrapper {{animateClass}} animated">
-                        <div>
+<!--         {{#if showLogin}} -->
+<!--         <div class="login-wrapper {{animateClass}} animated"> -->
+<!--                         <div>
                 <p>Click above icon to hide this info</p>
-              </div>
-            {{#if currentUser}}
-            <div class="actions-wrapper">
+              </div> -->
+<!--             {{#if currentUser}} -->
+<!--             <div class="actions-wrapper"> -->
               
 <!--                 {{#if currentUser.emails}}
                 <div class="hello">Hi {{currentUser.emails}}!</div>
                 {{/if}} -->
-              <div class="center aligned ui purple log-out button">
+<!--               <div class="center aligned ui purple log-out button">
                     <i class="sign out icon"></i>
                     Log out
-                </div>
+                </div> -->
               <br>
 <!--              {{> appMenu}} -->
-            </div>
-            {{else}}
-            {{> atForm }}
-            {{/if}}
-        </div>
-        {{/if}}
+<!--             </div> -->
+<!--             {{else}} -->
+<!--             {{> atForm }} -->
+<!--             {{/if}} -->
+<!--         </div> -->
+<!--         {{/if}} -->
     </div>
 </template>
 
-<template name="appMenu">
-<!--    <div class="ui labeled icon menu">
-     <a class="red item">
-       <i class="search icon"></i>
-       
-     </a>
-     <a class="teal item">
-       <i class="lab icon"></i>
-       Lab
-     </a>
-     <a class="green item">
-       <i class="star icon"></i>
-       Favorites
-     </a>
-  </div> -->
-  <div class="ui menu">
-  <a class="active item" href="{{pathFor route='home'}}">
-    <i class="home icon"></i> Home
-  </a>
-<div class="ui simple dropdown item">
-  <i class="search icon"></i>
-    Search by Postcode
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <a class="item"><i class="asterisk icon"></i> All Metrics</a>
-      <a class="item"><i class="crosshairs icon"></i> BMI</a>
-      <a class="item"><i class="crosshairs icon"></i> Weight</a>
-      <a class="item"><i class="crosshairs icon"></i> Activity</a>      
-    </div>
-  </div>
-  <div class="ui simple dropdown item">
-  <i class="line chart icon"></i>
-    Overall
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <a class="item"><i class="asterisk icon"></i> All Metrics</a>
-      <a class="item"><i class="crosshairs icon"></i> BMI</a>
-      <a class="item"><i class="crosshairs icon"></i> Weight</a>
-      <a class="item"><i class="crosshairs icon"></i> Activity</a>      
-    </div>
-  </div>  
-<!--   <div class="right menu">
-    <div class="item">
-      <div class="ui transparent icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-  </div> -->
-</div>
-</template>
 
