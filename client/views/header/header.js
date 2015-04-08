@@ -15,7 +15,7 @@ Template['header'].helpers({
   },
   iconClass: function () {
     //return Meteor.user() ? 'user' : 'sign in';
-    return Meteor.user() ? 'content' : 'sign in';
+    return Meteor.user() ? 'sign out' : 'sign in';
   }
 });
 

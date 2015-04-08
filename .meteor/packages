@@ -35,3 +35,6 @@ momentjs:moment
 gliese:chartist-js
 maazalik:highcharts
 percolate:synced-cron
+semantic:ui-sidebar
+semantic:ui-icon
+semantic:ui-menu
