@@ -81,8 +81,8 @@ function buildGaugeReactive() {
             name: 'Average BMI',
             data: data,
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:#7e7e7e">{y}</span><br/>' +
-                    '<span style="font-size:12px;color:silver">Average BMI<br> (approx.)</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:20px;color:#7e7e7e">{y}</span><br/>' +
+                    '<span style="font-size:9px;color:silver">Average BMI<br> (approx.)</span></div>'
             },
             tooltip: {
                 valueSuffix: ''

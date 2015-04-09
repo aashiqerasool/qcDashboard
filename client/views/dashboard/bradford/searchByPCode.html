@@ -28,25 +28,40 @@
   <br>
   <div class="ui centered grid">
     <div class="centered row">
-      <div class="three wide column">
+      <div class="five wide column">
 <!--         <br> -->
       {{> searchByPCodeInput}}
       </div>
     </div>
-    <div class="centered row">
+        <div class="centered row">
+      <div class="five wide column">
+        <div class="one wide column">
+          <div class="ui large header" align='center'>Average BMI</div>
+        </div>
+          </div>
+    </div>
+    <div class="centered row">      
       <div class="three wide column">
       {{> bmiByPostCode}} 
       </div>
       <div class="three wide column">
-      {{> avgWeightByPostCode}}
+      {{> reactiveAvgBmiGaugePC}} 
       </div>
     </div>
     <div class="centered row">
-      <div class="four wide column">
-      {{> reactiveAvgBmiGaugePC}} 
+      <div class="three wide column">
+      {{> avgWeightByPostCode}}
       </div>
-      <div class="four column wide">
+      <div class="three wide column">
       {{> reactiveAvgWeightGaugePC}}
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+      {{> avgActivityByPostCode}}
+      </div>
+      <div class="three wide column">
+      {{> reactiveAvgActivityGaugePC}}
       </div>
     </div>
   </div>

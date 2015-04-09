@@ -1,4 +1,4 @@
-<template name="avgWeightByPostCode">
+<template name="avgActivityByPostCode">
 <!--   {{> contentHeader title="BMI Stats"}}
   
   {{#each overallBmiStats}}
@@ -8,13 +8,13 @@
   {{/each}} -->
 <!--   <div align="center"> -->
   <br>
-  {{#if avgWeightByPCodeMethod}}
+  {{#if avgActivityByPCodeMethod}}
     <div class="ui huge statistic">
     <div class="value">
-      {{avgWeightByPCodeMethod}}
+      {{avgActivityByPCodeMethod}}
     </div>
     <div class="huge label">
-      Average Weight in {{postCode}}
+      Average Activity in {{postCode}}
     </div>
   </div>
   {{/if}}

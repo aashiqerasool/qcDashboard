@@ -36,10 +36,7 @@ Router.route('/bradfordStats', function () {
   SEO.set({ title: 'Bradford Health Statistics - ' + Meteor.App.NAME });
 });
 
-Router.route('/bmi/searchByPCode', function () {
-  this.render('searchBmiPCode');
-  SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
-});
+
 
 Router.route('/bmi/oaBmiGraph', function () {
   this.render('oaBmiGraph');
@@ -51,14 +48,28 @@ Router.route('/bmi/reactiveAvgBmiGaugePC', function () {
   SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
 });
 
-Router.route('/weight/searchByPCode', function () {
-  this.render('searchWeightPCode');
-  SEO.set({ title: 'Bradford Weight Statistics - ' + Meteor.App.NAME });
-});
+
+
+//Search routes
 
 Router.route('/search/byPCode/all', function () {
   this.render('searchByPCode');
   SEO.set({ title: 'Bradford Health Statistics - ' + Meteor.App.NAME });
+});
+
+Router.route('/search/byPCode/bmi', function () {
+  this.render('searchBmiPCode');
+  SEO.set({ title: 'Bradford BMI Statistics - ' + Meteor.App.NAME });
+});
+
+Router.route('/search/byPCode/weight', function () {
+  this.render('searchWeightPCode');
+  SEO.set({ title: 'Bradford Weight Statistics - ' + Meteor.App.NAME });
+});
+
+Router.route('/search/byPCode/activity', function () {
+  this.render('searchActivityPCode');
+  SEO.set({ title: 'Bradford Activity Statistics - ' + Meteor.App.NAME });
 });
 
 Router.map(function() {

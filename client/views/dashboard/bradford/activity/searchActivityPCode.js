@@ -1,20 +1,20 @@
-Template.searchWeightPCode.rendered = function() {
-  Session.setDefault('avgWeightSearchPCVal', null);
+Template.searchActivityPCode.rendered = function() {
+  Session.setDefault('avgActivitySearchPCVal', null);
 };
 
-Template.searchWeightPCode.events({
+Template.searchActivityPCode.events({
   'click #searchButton': function (event) {
     event.preventDefault();
     var searchTerm = $('#searchTerm').val();
-    Session.set('avgWeightSearchPCVal', searchTerm);
+    Session.set('avgActivitySearchPCVal', searchTerm);
 //     var searchTerm = event;
     console.log('Search button clicked: '+ searchTerm);
-    console.log('Session Value is '+ Session.get('avgWeightSearchPCVal'));
+    console.log('Session Value is '+ Session.get('avgActivitySearchPCVal'));
   },
     'keyup #searchTerm': function (event) {
     event.preventDefault();
     var searchTerm = $('#searchTerm').val();
-    Session.set('avgWeightSearchPCVal', searchTerm);
+    Session.set('avgActivitySearchPCVal', searchTerm);
 //     var searchTerm = event;
 //     console.log('Search button clicked: '+ searchTerm);
 //     console.log('Session Value is '+ Session.get('bmiSearchPCVal'));
