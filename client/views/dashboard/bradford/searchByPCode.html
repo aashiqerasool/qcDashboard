@@ -1,5 +1,5 @@
 <template name="searchByPCode">
-  
+<!--   {{> contentHeader title="All Metrics" align="center"}} -->
   
 <!--   <div align='center'>
     <br>
@@ -33,14 +33,14 @@
       {{> searchByPCodeInput}}
       </div>
     </div>
-        <div class="centered row">
-      <div class="five wide column">
+    <div class="centered row">
+      <div class="three wide column">
         <div class="one wide column">
-          <div class="ui large header" align='center'>Average BMI</div>
+          <div class="ui large header">Average BMI</div>
         </div>
-          </div>
+      </div>
     </div>
-    <div class="centered row">      
+    <div class="centered row">
       <div class="three wide column">
       {{> bmiByPostCode}} 
       </div>
@@ -50,10 +50,24 @@
     </div>
     <div class="centered row">
       <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Weight</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
       {{> avgWeightByPostCode}}
       </div>
       <div class="three wide column">
       {{> reactiveAvgWeightGaugePC}}
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Activity</div>
+        </div>
       </div>
     </div>
     <div class="centered row">

@@ -1,3 +1,8 @@
+Template.avgWeightByPostCode.rendered = function() {
+  Session.setDefault('avgWeightSearchPCVal', null);
+//   Session.setDefault("latestUserWeightsByPCode", null);
+};
+
 Template.avgWeightByPostCode.helpers({
   avgWeightByPCodeMethod: function(){
      var searchTerm = Session.get('avgWeightSearchPCVal')

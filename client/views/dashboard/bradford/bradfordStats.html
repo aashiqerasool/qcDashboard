@@ -1,10 +1,61 @@
 <template name="bradfordStats">
   {{> contentHeader title="Bradford Health Stats" align="center"}}
 
-  <div align="center">
+  <br>
+  <div class="ui centered grid">
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average BMI</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <br>
+      {{> overallAvgBmi}} 
+      </div>
+      <div class="three wide column">
+      {{> reactiveOaBmiGauge}} 
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Weight</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+      {{> overallAvgWeight}}
+      </div>
+      <div class="three wide column">
+      {{> reactiveAvgWeightGaugePC}}
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Activity</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+      {{> avgActivityByPostCode}}
+      </div>
+      <div class="three wide column">
+      {{> reactiveAvgActivityGaugePC}}
+      </div>
+    </div>
+  </div>
+  
+  
+<!--   <div align="center"> -->
 <!--   <div class="ui stacked segment"> -->
 <!--     <div class="ui statistics"> -->
-      {{> overallAvgBmi}}
+<!--       {{> overallAvgBmi}}
       &nbsp;
       &nbsp;
       &nbsp;
@@ -17,14 +68,14 @@
       &nbsp;
       &nbsp;
       &nbsp;
-      &nbsp;
+      &nbsp; -->
 <!--       {{> bmiByPostCode}} -->
-  </div>
+<!--   </div> -->
 <!--     </div> -->
 <!--   </div> -->
-  <div align="center">
+<!--   <div align="center">
   {{> searchBmiPCode}}
-  </div>
+  </div> -->
 
   
 </template>

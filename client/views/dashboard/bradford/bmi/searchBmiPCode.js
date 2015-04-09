@@ -1,5 +1,6 @@
 Template.searchBmiPCode.rendered = function() {
   Session.setDefault('bmiSearchPCVal', null);
+  Session.setDefault("latestUserBmisByPCode", null);
 };
 
 Template.searchBmiPCode.events({

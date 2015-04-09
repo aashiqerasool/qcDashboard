@@ -1,5 +1,6 @@
 Template.searchWeightPCode.rendered = function() {
   Session.setDefault('avgWeightSearchPCVal', null);
+  Session.setDefault("latestUserWeightsByPCode", null);
 };
 
 Template.searchWeightPCode.events({

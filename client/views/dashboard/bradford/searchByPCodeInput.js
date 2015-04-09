@@ -16,6 +16,7 @@ Template.searchByPCodeInput.events({
     var searchTerm = $('#searchTerm').val();
     Session.set('bmiSearchPCVal', searchTerm);
     Session.set('avgWeightSearchPCVal', searchTerm);
+    Session.set('avgActivitySearchPCVal', searchTerm);
 //     var searchTerm = event;
 //     console.log('Search button clicked: '+ searchTerm);
     console.log('Session Value is '+ Session.get('bmiSearchPCVal'));

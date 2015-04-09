@@ -1,7 +1,8 @@
 
-// Template.bmiByPostCode.rendered = function(){
-// Session.setDefault("latestUserBmisByPCode", null);
-// };
+Template.bmiByPostCode.rendered = function(){
+  Session.setDefault('bmiSearchPCVal', null);
+//   Session.setDefault("latestUserBmisByPCode", null);
+};
 
 Template.bmiByPostCode.helpers({
   bmiByPCodeMethod: function(){

@@ -1,5 +1,6 @@
 Template.searchActivityPCode.rendered = function() {
   Session.setDefault('avgActivitySearchPCVal', null);
+  Session.setDefault("latestUserActivityByPCode", null);
 };
 
 Template.searchActivityPCode.events({

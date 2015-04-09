@@ -1,21 +1,21 @@
 //https://github.com/jhuenges/highcharts-demo/blob/master/client/demos/gaugeReactiveDemo.js
 
-function buildGaugeReactive() {
+function buildoaBmiReactive() {
     
     var data = new Array();
     
     data[0] = 0;
-    var bmi = Session.get('latestUserBmiByPCode')
+    var bmi = Session.get('overallAvgBmis')
   console.log(bmi);
-    if(Session.get("latestUserBmisByPCode") !== undefined)
-      data[0] = Math.round(Session.get("latestUserBmisByPCode").avgBmi);
+    if(Session.get("overallAvgBmis") !== undefined)
+      data[0] = Math.round(Session.get("overallAvgBmis").avgBmi);
       
 //     if(Session.get('reactive') !== undefined)
 //         data[0] = Session.get('reactive');
   
   console.log(data[0]);  
   
-    $('#container-pcAvgBmi-gauge-reactive').highcharts({
+    $('#container-oaAvgBmi-gauge-reactive').highcharts({
         chart: {
             type: 'solidgauge'
         },
@@ -95,17 +95,17 @@ function buildGaugeReactive() {
 /*
  * Call the function to built the chart when the template is rendered
  */
-Template.reactiveAvgBmiGaugePC.rendered = function () {
+Template.reactiveOaBmiGauge.rendered = function () {
     this.autorun(function (c) {
-      console.log(Session.get('latestUserBmisByPCode'));  
-      buildGaugeReactive();
+      console.log(Session.get('overallAvgBmis'));  
+      buildoaBmiReactive();
     });
 }
 
 /*
  * Template events
  */
-Template.reactiveAvgBmiGaugePC.events = {
+Template.reactiveOaBmiGauge.events = {
     
     'change #reactive': function (event, template) {
         var newValue = $(event.target).val();

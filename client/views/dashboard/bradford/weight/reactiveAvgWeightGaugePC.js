@@ -15,7 +15,7 @@ function buildAvgWeightGaugeReactive() {
   
   console.log(data[0]);  
   
-    $('#container-avgWeight-gauge-reactive').highcharts({
+    $('#container-pcAvgWeight-gauge-reactive').highcharts({
         chart: {
             type: 'solidgauge'
         },
