@@ -1,0 +1,21 @@
+<template name='oaActivityShow'>
+  <br>
+  <div class="ui centered grid">
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Activity</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <br>
+      {{> overallAvgActivity}} 
+      </div>
+      <div class="three wide column">
+      {{> reactiveOaActivityGauge}} 
+      </div>
+    </div>
+  </div>
+</template>

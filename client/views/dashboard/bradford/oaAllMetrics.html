@@ -1,5 +1,5 @@
-<template name="bradfordStats">
-  {{> contentHeader title="Bradford Health Stats" align="center"}}
+<template name="oaAllMetrics">
+  {{> contentHeader title="Average of All Metrics for Whole Userbase" align="center"}}
 
   <br>
   <div class="ui centered grid">
@@ -28,10 +28,11 @@
     </div>
     <div class="centered row">
       <div class="three wide column">
+        <br>
       {{> overallAvgWeight}}
       </div>
       <div class="three wide column">
-      {{> reactiveAvgWeightGaugePC}}
+      {{> reactiveOaWeightGauge}}
       </div>
     </div>
     <div class="centered row">
@@ -43,10 +44,10 @@
     </div>
     <div class="centered row">
       <div class="three wide column">
-      {{> avgActivityByPostCode}}
+      {{> overallAvgActivity}}
       </div>
       <div class="three wide column">
-      {{> reactiveAvgActivityGaugePC}}
+      {{> reactiveOaActivityGauge}}
       </div>
     </div>
   </div>

@@ -30,13 +30,26 @@ Router.route('/playground', function () {
   this.render('playground');
   SEO.set({ title: 'Playground - ' + Meteor.App.NAME });
 });
-
-Router.route('/bradfordStats', function () {
-  this.render('bradfordStats');
-  SEO.set({ title: 'Bradford Health Statistics - ' + Meteor.App.NAME });
+//overall avg routes
+Router.route('/overall/all', function () {
+  this.render('oaAllMetrics');
+  SEO.set({ title: 'All Metrics Overall - ' + Meteor.App.NAME });
 });
 
+Router.route('/overall/bmi', function () {
+  this.render('oaBmiShow');
+  SEO.set({ title: 'Overall Average BMI - ' + Meteor.App.NAME });
+});
 
+Router.route('/overall/weight', function () {
+  this.render('oaWeightShow');
+  SEO.set({ title: 'Overall Average Weight - ' + Meteor.App.NAME });
+});
+
+Router.route('/overall/activity', function () {
+  this.render('oaActivityShow');
+  SEO.set({ title: 'Overall Average Activity - ' + Meteor.App.NAME });
+});
 
 Router.route('/bmi/oaBmiGraph', function () {
   this.render('oaBmiGraph');

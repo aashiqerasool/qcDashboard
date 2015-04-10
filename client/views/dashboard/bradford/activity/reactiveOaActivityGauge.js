@@ -1,21 +1,21 @@
 //https://github.com/jhuenges/highcharts-demo/blob/master/client/demos/gaugeReactiveDemo.js
 
-function buildAvgActivityGaugeReactive() {
+function buildoaActivityReactive() {
     
     var data = new Array();
     
     data[0] = 0;
-    var activity = Session.get('latestUserActivityByPCode')
+    var activity = Session.get('overallAvgActivity')
   console.log(activity);
-    if(Session.get("latestUserActivityByPCode") !== undefined)
-      data[0] = Math.round(Session.get("latestUserActivityByPCode").avgActivity);
+    if(Session.get("overallAvgActivity") !== undefined)
+      data[0] = Math.round(Session.get("overallAvgActivity").avgActivity);
       
 //     if(Session.get('reactive') !== undefined)
 //         data[0] = Session.get('reactive');
   
   console.log(data[0]);  
   
-    $('#container-pcAvgActivity-gauge-reactive').highcharts({
+    $('#container-oaAvgActivity-gauge-reactive').highcharts({
         chart: {
             type: 'solidgauge'
         },
@@ -47,9 +47,9 @@ function buildAvgActivityGaugeReactive() {
             },
 
             stops: [
-                [0.1, '#55BF3B'],
+                [0.1, '#DF5353'],
                 [0.5, '#DDDF0D'],
-                [0.9, '#DF5353']
+                [0.9, '#55BF3B']
             ],
             lineWidth: 0,
             minorTickInterval: null,
@@ -95,17 +95,17 @@ function buildAvgActivityGaugeReactive() {
 /*
  * Call the function to built the chart when the template is rendered
  */
-Template.reactiveAvgActivityGaugePC.rendered = function () {
+Template.reactiveOaActivityGauge.rendered = function () {
     this.autorun(function (c) {
-      console.log(Session.get("latestUserActivityByPCode"));  
-      buildAvgActivityGaugeReactive();
+      console.log(Session.get("overallAvgActivity"));  
+      buildoaActivityReactive();
     });
 }
 
 /*
  * Template events
  */
-Template.reactiveAvgActivityGaugePC.events = {
+Template.reactiveOaAvgActivityGauge.events = {
     
     'change #reactive': function (event, template) {
         var newValue = $(event.target).val();

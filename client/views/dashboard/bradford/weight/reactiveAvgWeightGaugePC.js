@@ -47,9 +47,9 @@ function buildAvgWeightGaugeReactive() {
             },
 
             stops: [
-                [0.1, '#55BF3B'],
+                [0.1, '#DF5353'],
                 [0.5, '#DDDF0D'],
-                [0.9, '#DF5353']
+                [0.9, '#55BF3B']
             ],
             lineWidth: 0,
             minorTickInterval: null,

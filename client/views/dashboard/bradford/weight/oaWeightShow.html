@@ -1,0 +1,21 @@
+<template name='oaWeightShow'>
+  <br>
+  <div class="ui centered grid">
+    <div class="centered row">
+      <div class="three wide column">
+        <div class="one wide column">
+          <div class="ui large header">Average Weight</div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="three wide column">
+        <br>
+      {{> overallAvgWeight}} 
+      </div>
+      <div class="three wide column">
+      {{> reactiveOaWeightGauge}} 
+      </div>
+    </div>
+  </div>
+</template>

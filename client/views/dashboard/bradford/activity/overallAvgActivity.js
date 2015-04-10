@@ -10,7 +10,7 @@ Template.overallAvgActivity.helpers({
   },
     overallAvgActivity: function() {
     var overallStats;
-    Remote.call('overallAvgActivtiy', function(error, result) {
+    Remote.call('overallAvgActivity', function(error, result) {
       overallAvgActivity = result;
       Session.set("overallAvgActivity", result);
       return;

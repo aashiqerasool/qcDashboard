@@ -1,21 +1,21 @@
 //https://github.com/jhuenges/highcharts-demo/blob/master/client/demos/gaugeReactiveDemo.js
 
-function buildAvgActivityGaugeReactive() {
+function buildoaWeightReactive() {
     
     var data = new Array();
     
     data[0] = 0;
-    var activity = Session.get('latestUserActivityByPCode')
-  console.log(activity);
-    if(Session.get("latestUserActivityByPCode") !== undefined)
-      data[0] = Math.round(Session.get("latestUserActivityByPCode").avgActivity);
+    var weight = Session.get('overallAvgWeight')
+  console.log();
+    if(Session.get("overallAvgWeight") !== undefined)
+      data[0] = Math.round(Session.get("overallAvgWeight").avgWeight);
       
 //     if(Session.get('reactive') !== undefined)
 //         data[0] = Session.get('reactive');
   
   console.log(data[0]);  
   
-    $('#container-pcAvgActivity-gauge-reactive').highcharts({
+    $('#container-oaAvgWeight-gauge-reactive').highcharts({
         chart: {
             type: 'solidgauge'
         },
@@ -41,9 +41,9 @@ function buildAvgActivityGaugeReactive() {
 
         yAxis: {
             min: 0,
-            max: 10,
+            max: 200,
             title: {
-                text: 'Activity'
+                text: 'Weight (KG)'
             },
 
             stops: [
@@ -78,14 +78,14 @@ function buildAvgActivityGaugeReactive() {
         },
 
         series: [{
-            name: 'Average Activity (Hours)',
+            name: 'Average Weight (KG)',
             data: data,
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:20px;color:#7e7e7e"><br>{y}</span><br/>' +
-                    '<span style="font-size:9px;color:silver">Average Activity<br>(Hours)<br> (approx.)</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:20px;color:#7e7e7e">{y}</span><br/>' +
+                    '<span style="font-size:9px;color:silver">Average Weight<br> (approx.)</span></div>'
             },
             tooltip: {
-                valueSuffix: 'Hours'
+                valueSuffix: 'KG'
             }
         }]
     });
@@ -95,17 +95,17 @@ function buildAvgActivityGaugeReactive() {
 /*
  * Call the function to built the chart when the template is rendered
  */
-Template.reactiveAvgActivityGaugePC.rendered = function () {
+Template.reactiveOaWeightGauge.rendered = function () {
     this.autorun(function (c) {
-      console.log(Session.get("latestUserActivityByPCode"));  
-      buildAvgActivityGaugeReactive();
+      console.log(Session.get('overallAvgWeight'));  
+      buildoaWeightReactive();
     });
 }
 
 /*
  * Template events
  */
-Template.reactiveAvgActivityGaugePC.events = {
+Template.reactiveOaWeightGauge.events = {
     
     'change #reactive': function (event, template) {
         var newValue = $(event.target).val();
