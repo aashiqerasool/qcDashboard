@@ -105,7 +105,7 @@ Template.reactiveOaActivityGauge.rendered = function () {
 /*
  * Template events
  */
-Template.reactiveOaAvgActivityGauge.events = {
+Template.reactiveOaActivityGauge.events = {
     
     'change #reactive': function (event, template) {
         var newValue = $(event.target).val();
