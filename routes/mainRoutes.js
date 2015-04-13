@@ -86,7 +86,7 @@ Router.route('/search/byPCode/activity', function () {
 });
 
 Router.map(function() {
-  this.route('bmiByPostCode', {
+  this.route('/search/bmiByPostCode', {
     path: '/bmiByPostCode/:postCode',
     data: function(){
       console.log(this.params.postCode);
@@ -116,6 +116,10 @@ Router.map(function() {
   });
 });
 // Router.route('/maps/map', {name: 'map'});
+
+Router.plugin('ensureSignedIn', {
+    except: ['home', 'signIn', 'atSignIn', 'atSignUp', 'atForgotPassword']
+});
 
 
 // Router.onBeforeAction(function() {
