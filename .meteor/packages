@@ -39,3 +39,12 @@ semantic:ui-sidebar
 semantic:ui-icon
 semantic:ui-menu
 email
+aldeed:autoform
+aldeed:simple-schema
+aldeed:autoform-bs-datepicker
+semantic:ui-button
+semantic:ui-transition
+semantic:ui-dimmer
+semantic:ui-reveal
+semantic:ui-api
+momentjs:twix

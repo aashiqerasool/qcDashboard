@@ -16,6 +16,11 @@ Router.route('/profile', function () {
   SEO.set({ title: 'Profile - ' + Meteor.App.NAME });
 });
 
+Router.route('/updateProfile', function () {
+  this.render('updateProfile');
+  SEO.set({ title: 'Update Profile - ' + Meteor.App.NAME });
+});
+
 Router.route('/ddpTest', function () {
   this.render('ddpTest');
   SEO.set({ title: 'ddptest - ' + Meteor.App.NAME });

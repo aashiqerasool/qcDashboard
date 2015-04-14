@@ -1,3 +1,24 @@
 <template name="profile">
-  <h1 class="ui header">Profile</h1>
+  <div id="main-content" class="main-content padding-wrapper">
+    <h1 class="ui header">Profile</h1>
+      <h3>Name: {{firstName}} {{lastName}}</h3>
+      <h3>Age: {{age}}</h3>
+      {{#if gender}}
+      <h3>Gender: {{gender}}</h3>
+      {{else}}
+      <h3>Gender: <a href="/updateProfile">Update gender</a></h3>
+        {{/if}}
+      <h3>User Type: {{userType}}</h3>
+      <div class="ui basic button">
+        <a href="/updateProfile">
+        <i class="icon edit"></i>
+        Update Profile
+        </a>
+      </div>
+       
+<!--       <div>
+        <a href="/updateProfile" class="btn btn-primary">Modify profile</a>
+      </div> -->
+  </div>
+  
 </template>

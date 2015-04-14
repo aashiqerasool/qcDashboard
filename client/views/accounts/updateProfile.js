@@ -1,0 +1,20 @@
+Template.updateProfile.helpers({
+    pageName: function () {
+    return "Update Profile";
+  },
+  users: function () {
+    return Meteor.users;
+  },
+  user: function() {
+    return Meteor.user();
+  },
+  userSchema: function () {
+    return Schema.User;
+  }
+});
+
+AutoForm.addHooks(['updateProfileForm'], {
+    onSuccess: function () {
+      Router.go('/profile');
+    }
+  });
