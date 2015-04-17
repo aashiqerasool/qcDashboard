@@ -1,3 +1,8 @@
 Template.atDob.rendered=function() {
-    $('.at-field-dob').pickadate();
+    $('.datepicker').pickadate({
+    	selectMonths: true,
+    	selectYears: 160,
+    	min: new Date(1900,1,1),
+    	max: true
+    });
 }

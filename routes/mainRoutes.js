@@ -120,7 +120,7 @@ Router.map(function() {
     }
   });
 });
-// Router.route('/maps/map', {name: 'map'});
+Router.route('/maps/map', {name: 'map'});
 
 Router.plugin('ensureSignedIn', {
     except: ['home', 'signIn', 'atSignIn', 'atSignUp', 'atForgotPassword']

@@ -5,6 +5,7 @@ aldeed:autoform-bs-datepicker@1.1.1
 aldeed:collection2@2.3.3
 aldeed:geocoder@0.3.6
 aldeed:simple-schema@1.3.2
+aldeed:template-extension@3.4.3
 audit-argument-checks@1.0.3
 autoupdate@1.2.1
 base64@1.0.3
@@ -58,9 +59,11 @@ matteodem:easy-security@0.1.4
 meteor@1.1.6
 meteor-platform@1.2.2
 meteorhacks:aggregate@1.2.1
+meteorhacks:async@1.0.0
 meteorhacks:collection-utils@1.2.0
 meteorhacks:fast-render@2.3.2
 meteorhacks:inject-data@1.2.3
+meteorhacks:npm@1.3.0
 meteorhacks:picker@1.0.2
 minifiers@1.1.5
 minimongo@1.0.8
@@ -69,12 +72,14 @@ momentjs:moment@2.10.2
 momentjs:twix@0.6.3
 mongo@1.1.0
 mongo-livedata@1.0.8
+mquandalle:jade@0.4.1
 natestrauser:animate-css@3.2.6
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 peerlibrary:dimsum@0.1.8_6
 percolate:synced-cron@1.2.0
+pfafman:filesaver@0.1.0
 raix:handlebar-helpers@0.2.4
 rajit:bootstrap3-datepicker@1.4.1
 random@1.0.3
@@ -82,6 +87,8 @@ reactive-dict@1.1.0
 reactive-var@1.0.5
 reload@1.1.3
 retry@1.0.3
+robertlowe:autoform-pickadate@0.1.2
+robertlowe:pickadate@3.5.5
 routepolicy@1.0.5
 semantic:ui-api@1.11.7
 semantic:ui-button@1.11.7

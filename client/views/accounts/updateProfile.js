@@ -1,3 +1,12 @@
+/* Template.updateProfile.rendered=function() {
+    $('input').pickadate({
+    	selectMonths: true,
+    	selectYears: 160,
+    	min: new Date(1900,1,1),
+    	max: true
+    });
+} */
+
 Template.updateProfile.helpers({
     pageName: function () {
     return "Update Profile";
@@ -10,6 +19,14 @@ Template.updateProfile.helpers({
   },
   userSchema: function () {
     return Schema.User;
+  },
+  options: function () {
+  	return {
+  		selectMonths: true,
+    	selectYears: 160,
+    	min: new Date(1900,1,1),
+    	max: true
+  	}
   }
 });
 

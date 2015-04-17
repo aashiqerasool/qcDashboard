@@ -34,7 +34,7 @@ Template.profile.helpers({
     var dobYear = dob.getFullYear();
     var dobMonth = dob.getMonth();
     var ageYear = currentYear - dobYear;
-    var ageMonth = dobMonth - currentMonth;
+    var ageMonth = currentMonth - dobMonth;
     console.log(currentMonth + " " + dobMonth);
     if (currentMonth <= dobMonth || currentMonth == dobMonth && currentDate.getDate() < dob.getDate()) {
       ageYear--;
@@ -43,14 +43,23 @@ Template.profile.helpers({
     if (ageMonth < 0) {
       ageMonth = Math.abs(ageMonth);
     }
-    var ageFull = ageYear + " years " + ageMonth + " months";
-    
+    if (currentMonth < dobMonth) {
+    ageMonth = 12 - ageMonth;
+}
+    var ageFull = ageYear + " years and " + ageMonth + " months old";
+    var ageFullPrecise = ageYear + " years old";
 //     var ageyr = moment(dob).twix(currentDate).length("years");
 //     var lastBday = moment((currentYear-1)+"-"+dobMonth+"-"+dob.getDay(), "YYYY-MM-DD");
 //     console.log(lastBday);
 //     var agemonth = moment(lastBday).twix(dobMonth).length("months");
-    
-    return ageFull;
+    if (ageMonth == 0) {
+    return ageFullPrecise
+    }
+    else
+    {
+    	return ageFull
+    }
+//     return ageFull;
   }
 });
 

@@ -48,3 +48,6 @@ semantic:ui-dimmer
 semantic:ui-reveal
 semantic:ui-api
 momentjs:twix
+robertlowe:autoform-pickadate
+meteorhacks:npm
+pfafman:filesaver
