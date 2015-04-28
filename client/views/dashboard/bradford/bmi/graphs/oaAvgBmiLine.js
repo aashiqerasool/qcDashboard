@@ -3,16 +3,11 @@ function buildAvgBmiChartReactive() {
     var data = new Array();
     
     data[0] = 0;
-//     var bmi = Session.get('latestUserBmiByPCode')
-//   console.log(bmi);
   Remote.call('oaAvgBmiHistory', function(error, result) {
       Session.set('bmiHistoryData', result);
     });
-//     OaAvgBmiHistory = new Meteor.Collection('oaAvgBmiHist', Remote);
-//     Remote.subscribe('oaAvgBmiHistorySub');
+
     var bmis = Session.get('bmiHistoryData');
-//     var bmis = OaAvgBmiHistory.find().fetch();
-//     console.log(Session.get('bmiHistoryData'));
     var dataset = [];
     var bmisOnly = [];
     var datesOnly = [];
@@ -24,10 +19,7 @@ function buildAvgBmiChartReactive() {
         "date": record.updatedAt,
         "avgBmi": record.avgBmi.toFixed(2)
       };
-      
-//       var item2 = {
-//         "weight": weight.weight
-//       };
+
    
       dataset.push(item);
       bmisOnly.push(Math.round(record.avgBmi));
@@ -36,12 +28,6 @@ function buildAvgBmiChartReactive() {
     
     });
     }
-  
-//     if(Session.get("latestUserBmisByPCode") !== undefined)
-//       data[0] = Math.round(Session.get("latestUserBmisByPCode").avgBmi);
-      
-//     if(Session.get('reactive') !== undefined)
-//         data[0] = Session.get('reactive');
   
   console.log(data[0]);  
   
@@ -63,12 +49,6 @@ function buildAvgBmiChartReactive() {
       },
       xAxis: {
         categories: datesOnly,
-        //             labels: {
-        //               align
-
-        //           }
-        //           ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-        //                 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       },
       yAxis: {
         title: {
@@ -102,8 +82,7 @@ function buildAvgBmiChartReactive() {
 
 
 Template.oaAvgBmiLine.rendered = function () {
-    this.autorun(function (c) {
-//       console.log(Session.get('latestUserBmisByPCode'));  
+    this.autorun(function (c) { 
       buildAvgBmiChartReactive();
     });
 }
